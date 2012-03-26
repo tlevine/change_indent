@@ -24,7 +24,7 @@ done
 if [ $from -eq $to ]; then
   cat
 elif [ $from -eq 2 ]; then
-  sed "s/\(^ +\)[^ ]/\1\1/"
+  sed "s/\(^[ ]*\)\([^ ]\)/\1\1\2/"
 elif [ $from -eq 4 ]; then
   echo Converting 4-space indents to 2-space indents isn\'t supported yet.
   exit 1

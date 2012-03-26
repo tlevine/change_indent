@@ -33,7 +33,7 @@ TO = int(argv[2])
 indent_adjustment_factor = TO / FROM
 
 for oldline in stdin.readlines():
-  old_indent_length = len(re.findall(r'^ *', oldline)[0])
+  old_indent_length = len(re.findall(r'^[ \t]*', oldline)[0])
   new_indent_length_float = old_indent_length * indent_adjustment_factor
   new_indent_length = int(old_indent_length * indent_adjustment_factor)
 
